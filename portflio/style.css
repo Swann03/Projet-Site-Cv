@@ -1,0 +1,160 @@
+/* === RESET DE BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === STRUCTURE GLOBALE === */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0a192f; /* fond bleu nuit */
+  color: #ccd6f6; /* texte clair */
+  display: flex;
+}
+
+/* === SIDEBAR VERTICALE FINE === */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px; /* beaucoup plus fin */
+  height: 100vh;
+  background-color: #112240;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.sidebar h1 {
+  display: none; /* on cache le nom si on veut juste la barre verticale */
+}
+
+.sidebar nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.sidebar nav a {
+  color: #8892b0;
+  text-decoration: none;
+  font-weight: bold;
+  writing-mode: vertical-rl; /* texte écrit verticalement */
+  text-orientation: mixed;   /* lettres lisibles */
+  transform: rotate(180deg); /* inverse le texte pour lire de bas en haut */
+  transition: color 0.3s;
+  text-align: center;
+}
+
+.sidebar nav a:hover {
+  color: #64ffda;
+}
+
+/* === CONTENU PRINCIPAL === */
+main {
+  margin-left: 60px; /* adapte à la nouvelle largeur de sidebar */
+  padding: 40px;
+}
+
+
+/* === SECTIONS === */
+section {
+  margin-bottom: 80px;
+}
+
+section h2 {
+  color: #64ffda;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+section p, section ul {
+  line-height: 1.6;
+}
+
+/* === SECTION "MOI" === */
+#me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#me h2 span {
+  color: #64ffda;
+}
+
+/* === SECTION D’INTRO === */
+#intro {
+  min-height: 100vh; /* prend toute la hauteur de l'écran */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+#intro h1 {
+  font-size: 3rem;
+  color: #64ffda; /* vert clair stylé */
+  margin-bottom: 10px;
+}
+
+#intro h2 {
+  font-size: 2.5rem;
+  color: #ccd6f6;
+  margin-bottom: 20px;
+}
+
+#intro h2 span {
+  color: #64ffda;
+}
+
+#intro p {
+  font-size: 1.2rem;
+  color: #8892b0;
+  max-width: 600px;
+  line-height: 1.6;
+}
+#intro {
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #64ffda;
+  color: #0a192f;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* === FORMULAIRE DE CONTACT === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
+
