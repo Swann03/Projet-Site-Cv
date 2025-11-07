@@ -29,7 +29,7 @@ body {
 }
 
 .sidebar h1 {
-  display: none; /* on cache le nom si on veut juste la barre verticale */
+  display: none;
 }
 
 .sidebar nav ul {
